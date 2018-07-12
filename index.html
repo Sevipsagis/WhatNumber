@@ -11,8 +11,15 @@
         crossorigin="anonymous">
 </head>
 
-<body>
+<body id="gameWindow" class="container-fluid d-flex justify-content-start align-items-start">
+    <div id="chanceBox">
+        <label class="h4 font-weight-light">
+            <span style="color: #4ecca3;">Y</span>our
+            <span style="color: #4ecca3;">C</span>hance : &nbsp;</label>
+        <span id="yourChance" class="h4 font-weight-light" style="color: #4ecca3;"></span>
+    </div>
     <div id="gameBox" class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        <div id="playerChance" class="d-flex justify-content-start align-items-start">aaa</div>
         <div class="container">
             <h1 id="gameTitle" class="display-2 text-center">What Number ?</h1>
             <p class="h6 text-center description">Number have value between 0 - 99</p>
@@ -21,6 +28,9 @@
             <input id="gameInput" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Type your number.">
             <button id="checkedButton" class="btn btn-info">Checked</button>
         </div>
+        <div id="gameAlert" class="alert alert-danger d-none" role="alert">
+            It's Wrong.
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,7 +38,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 
 </html>

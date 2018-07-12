@@ -1,8 +1,24 @@
+#gameWindow{
+    width: 100vw;
+    height: 100vh;
+    background-color: #232931;
+    position: relative;
+
+}
+
 #gameBox{
     width: 100vw;
     height: 100vh;
     background-color: #232931;
+    vertical-align: -webkit-baseline-middle;
 
+}
+
+#chanceBox{
+    position: absolute;
+    color: #eeeeee;
+    left: 3.5%;
+    top: 3.5%;
 }
 
 #gameTitle{
@@ -11,10 +27,6 @@
 p.description{
     color: #eeeeee;
     margin-bottom: 20px;
-}
-
-#gameText{
-    color: #ef3f61;
 }
 
 #gameInput{
@@ -33,7 +45,7 @@ p.description{
     /* box-shadow: 0px 0px 20px #4ecca3; */
 }
 
-#submitButton{
+#checkedButton{
     background-color: #4ecca3;
     width: 12vh;
     height: 5vh
