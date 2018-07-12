@@ -53,7 +53,9 @@ $(document).ready(function () {
             gameAlert.classList.add("alert-danger");
             gameAlert.innerHTML = "It's too high!!!"
         }
-        hideAlert();
+        setTimeout(()=>{
+            hideAlert();
+        }, 1000);
     }
     function hideAlert(){
         setTimeout(function(){
