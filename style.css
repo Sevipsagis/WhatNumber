@@ -51,6 +51,10 @@ p.description{
     height: 5vh
 }
 
+#checkedButton:hover{
+    background-color: #4cac8c;
+}
+
 #gameAlert{
     position: absolute;
     top: 0;
@@ -62,4 +66,10 @@ p.description{
 
 #gameAlert.hideAlert{
     opacity: 0;
+}
+
+#restartButton{
+    position: absolute;
+    right: 3.5%;
+    top: 3.5%;
 }

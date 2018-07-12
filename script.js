@@ -1,6 +1,9 @@
 var playerChance = 7;
 var gameStatus = false;
 yourChance.innerHTML = playerChance;
+function restartPage(){
+    location.reload();
+}
 $(document).ready(function () {
     var randomNumber = Math.floor(Math.random() * 100);
     console.log(randomNumber);
