@@ -50,3 +50,10 @@ p.description{
     width: 12vh;
     height: 5vh
 }
+
+#gameAlert{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    text-align: center;
+}
