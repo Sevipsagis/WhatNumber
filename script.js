@@ -30,6 +30,9 @@ $(document).ready(function () {
                 showAlert(0);
             }
             yourChance.innerHTML = playerChance;
+            if(playerChance == 0 || gameStatus){
+                showResult();
+            }
         }
     });
     function showAlert(status){
@@ -52,6 +55,11 @@ $(document).ready(function () {
     function hideAlert(){
         setTimeout(function(){
             gameAlert.classList.toggle("hideAlert");
+            gameAlert.classList.remove("alert-danger");
+            gameAlert.classList.remove("alert-success");
         }, 3000);
+    }
+    function showResult(){
+        gameTitle.innerHTML = `The Number is <span style="color: #ff4d4d;">"${randomNumber}"</span>`;
     }
 });
