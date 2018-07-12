@@ -15,10 +15,11 @@
     <div id="gameBox" class="container-fluid d-flex flex-column justify-content-center align-items-center">
         <div class="container">
             <h1 id="gameTitle" class="display-2 text-center">What Number ?</h1>
+            <p class="h6 text-center description">Number have value between 0 - 99</p>
         </div>
         <div class="container d-flex justify-content-center">
             <input id="gameInput" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Type your number.">
-            <button id="submitButton" class="btn btn-info">Checked</button>
+            <button id="checkedButton" class="btn btn-info">Checked</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
