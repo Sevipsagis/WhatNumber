@@ -53,16 +53,14 @@ $(document).ready(function () {
             gameAlert.classList.add("alert-danger");
             gameAlert.innerHTML = "It's too high!!!"
         }
-        setTimeout(()=>{
-            hideAlert();
-        }, 1000);
+        hideAlert();
     }
     function hideAlert(){
         setTimeout(function(){
             gameAlert.classList.toggle("hideAlert");
             gameAlert.classList.remove("alert-danger");
             gameAlert.classList.remove("alert-success");
-        }, 3000);
+        }, 2500);
     }
     function showResult(){
         gameTitle.innerHTML = `The Number is <span style="color: #ff4d4d;">"${randomNumber}"</span>`;
