@@ -56,4 +56,10 @@ p.description{
     top: 0;
     width: 40%;
     text-align: center;
+    opacity: 1;
+    transition: all 1s;
+}
+
+#gameAlert.hideAlert{
+    opacity: 0;
 }

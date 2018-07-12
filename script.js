@@ -4,23 +4,28 @@ yourChance.innerHTML = playerChance;
 $(document).ready(function () {
     var randomNumber = Math.floor(Math.random() * 100);
     console.log(randomNumber);
-
-    $(checkedButton).on("click", function () {
+    gameInput.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            checkedButton.click();
+        }
+    });
+    $("#checkedButton").on("click", function () {
         if (gameStatus != true && playerChance != 0 && gameInput.value != "") {
             var playerNumber = parseInt(gameInput.value);
             console.log(playerNumber);
             if (randomNumber > playerNumber) {
-                gameTitle.innerHTML = "It's too low."
+                // gameTitle.innerHTML = "It's too low."
                 playerChance--;
                 showAlert(1);
             }
             else if (randomNumber < playerNumber) {
-                gameTitle.innerHTML = "It's too high."
+                // gameTitle.innerHTML = "It's too high."
                 playerChance--;
                 showAlert(2);
             }
             else {
-                gameTitle.innerHTML = "It's corrected."
+                // gameTitle.innerHTML = "It's corrected."
                 gameStatus = true;
                 showAlert(0);
             }
@@ -28,7 +33,7 @@ $(document).ready(function () {
         }
     });
     function showAlert(status){
-        gameAlert.classList.toggle("d-none");
+        gameAlert.classList.toggle("hideAlert");
         if(status==0){
             gameAlert.classList.add("alert-success");
             gameAlert.innerHTML = "Correct!!!"
@@ -46,7 +51,7 @@ $(document).ready(function () {
     }
     function hideAlert(){
         setTimeout(function(){
-            gameAlert.classList.toggle("d-none");
-        }, 2000);
+            gameAlert.classList.toggle("hideAlert");
+        }, 3000);
     }
 });
